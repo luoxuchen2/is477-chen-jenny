@@ -1,7 +1,7 @@
 # Project Plan for Luoxu Chen and Maya Jenny 
 
 ## Overview: 
-The goal of this project is to analyze how player characteristics relate to ATP rankings and to explore whether these characteristics can help predict a player’s ranking performance. By integrating two complementary datasets—one containing ATP player information (such as height, handedness, country, and date of birth) and another containing historical ATP ranking data. The project aims to examine patterns between player attributes and ranking outcomes. Understanding these relationships can provide insight into how physical and demographic characteristics may influence success in professional tennis.
+The goal of this project is to analyze how player characteristics relate to ATP rankings and to explore whether these characteristics can help predict a player’s ranking performance. By integrating two complementary datasets: one containing ATP player information (such as height, handedness, country, and date of birth) and another containing historical ATP ranking data. The project aims to examine patterns between player attributes and ranking outcomes. Understanding these relationships can provide insight into how physical and demographic characteristics may influence success in professional tennis.
 
 To achieve this goal, the project will first clean and preprocess both datasets, ensuring that variables such as player identifiers, dates, and missing values are handled appropriately. The datasets will then be merged using common identifiers linking player information with ranking history. After integration, exploratory data analysis will be conducted to investigate trends between player characteristics and rankings. Additional features such as player age at the time of ranking will be calculated to enhance the analysis.
 
@@ -12,7 +12,7 @@ Finally, a predictive modeling approach will be implemented to examine whether p
 
 Maya Jenny will be responsible for cleaning the data in the dataset, early data visualization insight, and evaluating the model Luoxu creates. Luoxu Chen will be responsible for data engineering, modeling the data with a train-test split, and result prediction and visualization.
 
-Research / Business Question:
+## Research / Business Question:
 Can we create a predictive model on a player’s ranking in 2024 based on characteristics of the player, such as height, age, and country?
 
 
