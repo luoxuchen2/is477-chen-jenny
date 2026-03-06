@@ -38,31 +38,31 @@ These two datasets both share the common attribute of player ID, where each play
 ## Timeline
 This project will follow a structured data lifecycle consisting of data acquisition, integration, cleaning, analysis, modeling, and documentation. GitHub will be used for version control and collaboration, and all work will be documented in Markdown to ensure transparency and reproducibility. Each team member will contribute commits to the repository to demonstrate individual contributions.
 
-**Step 1: Data Acquisition and Organization** – *Target Completion: March 13, 2026*
+**Step 1: Data Acquisition and Organization** – *Target Completion: March 13, 2026*:
 Both team members will collect the two datasets (ATP player dataset and ATP ranking dataset) from the Jeff Sackmann tennis repository. Files will be stored as CSV files in the project repository and organized into folders for raw data, processed data, and analysis scripts.
 
-**Step 2: Data Integration** – *Target Completion: March 13, 2026* 
+**Step 2: Data Integration** – *Target Completion: March 13, 2026*:
 The datasets will be merged using Python and Pandas by linking player identifiers. This step will ensure that player attributes and ranking history are combined into a unified dataset.
 
-**Step 3: Data Quality Assessment and Cleaning** – *Target Completion: March 27, 2026*
+**Step 3: Data Quality Assessment and Cleaning** – *Target Completion: March 27, 2026*:
 The team will assess missing values, duplicates, and formatting issues. Cleaning methods will include handling missing values, correcting inconsistent data types, and verifying valid ranges for variables such as ranking and height.
 
-**Step 4: Exploratory Data Analysis** – *Target Completion: March 27, 2026*
+**Step 4: Exploratory Data Analysis** – *Target Completion: March 27, 2026*:
 Descriptive statistics and visualizations such as histograms, box plots, and summary statistics (mean, median, and distribution patterns) will be generated to understand the structure of the data.
 
-**Step 5: Feature Engineering** – *Target Completion: April 3, 2026*
+**Step 5: Feature Engineering** – *Target Completion: April 3, 2026*:
 New variables will be created, including calculating player age based on ranking date and date of birth. Categorical variables such as handedness will be converted into numerical formats for modeling.
 
-**Step 6: Model Preparation** – *Target Completion: April 17, 2026*
+**Step 6: Model Preparation** – *Target Completion: April 17, 2026*:
 The dataset will be split into training and testing sets to prepare for predictive modeling.
 
-**Step 7: Model Training and Prediction** – *Target Completion: April 24, 2026*
+**Step 7: Model Training and Prediction** – *Target Completion: April 24, 2026*:
 A predictive model (such as linear regression) will be trained to estimate ranking outcomes using player characteristics. Predictions will be generated using the testing dataset.
 
-**Step 8: Model Evaluation** – *Target Completion: May 1, 2026*
+**Step 8: Model Evaluation** – *Target Completion: May 1, 2026*:
 Model performance will be evaluated using metrics such as R² and RMSE to determine how well player characteristics explain ranking outcomes.
 
-**Step 9: Workflow Automation, Documentation, and Reproducibility** – *Target Completion: May 1, 2026*
+**Step 9: Workflow Automation, Documentation, and Reproducibility** – *Target Completion: May 1, 2026*:
 The project workflow will be automated through structured scripts to ensure reproducibility. Metadata and documentation will be provided to describe datasets, variables, and analysis steps so that others can replicate the project.
 
 Throughout the project, ethical considerations, licensing requirements, and proper attribution for the datasets will be documented to ensure responsible data usage.
