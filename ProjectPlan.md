@@ -80,4 +80,5 @@ Finally, the project focuses only on the variables available in the dataset, suc
 
 
 
-## Gaps: Future topics such as workflow automation, reproducibility, and metadata documentation will help ensure that the data processing pipeline is organized, transparent, and reproducible. As these topics are introduced, the project workflow may be refined to improve data management and documentation.
+## Gaps: 
+Future topics such as workflow automation, reproducibility, and metadata documentation will help ensure that the data processing pipeline is organized, transparent, and reproducible. As these topics are introduced, the project workflow may be refined to improve data management and documentation.
