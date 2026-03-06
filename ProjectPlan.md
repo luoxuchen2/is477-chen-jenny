@@ -68,7 +68,7 @@ The project workflow will be automated through structured scripts to ensure repr
 Throughout the project, ethical considerations, licensing requirements, and proper attribution for the datasets will be documented to ensure responsible data usage.
 
 
-## Constraint: 
+## Constraints: 
 
 One limitation of this project is that the datasets are compiled from publicly available tennis records and may contain incomplete or missing information for some players or time periods. For example, certain player attributes such as height, handedness, or birth dates may not be available for all athletes, which could reduce the number of observations usable for analysis. Additionally, rankings data is recorded periodically rather than continuously, meaning that a player’s ranking may not perfectly reflect their exact competitive level at every point in time.
 
