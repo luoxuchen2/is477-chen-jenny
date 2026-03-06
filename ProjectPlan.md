@@ -22,9 +22,13 @@ First Dataset:
 ATP Players
 https://github.com/JeffSackmann/tennis_atp/blob/master/atp_players.csv 
 
+This dataset contains demographic and physical information about professional ATP tennis players. The variables include player identifiers, first and last names, handedness, date of birth, nationality (IOC country code), and height. These attributes provide information about player characteristics that may influence performance in professional tennis. In this project, the dataset will be used to analyze how player characteristics such as age, height, and handedness relate to ATP ranking outcomes. The dataset will also be used to calculate additional variables, such as player age at the time of each ranking observation.
+
 Second Dataset: 
 ATP Rankings 
 https://github.com/JeffSackmann/tennis_atp/blob/master/atp_rankings_current.csv 
+
+This dataset contains ATP player rankings recorded throughout the year 2024. Each record includes the ranking date, player identifier, ranking position, and ranking points. Although the dataset only covers the 2024 season, rankings are recorded on multiple dates throughout the year, allowing us to observe changes in ranking positions over time. In this project, the ranking dataset will serve as the primary measure of player performance. It will be integrated with the player information dataset using player identifiers so that player characteristics can be analyzed alongside ranking outcomes.
 
 These two datasets both share the common attribute of player ID, where each player gets a unique numerical id. We are able to merge on this attribute. 
 
