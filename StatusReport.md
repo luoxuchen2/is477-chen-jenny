@@ -73,5 +73,5 @@ We also encountered issues with the dob (date of birth) column, which was stored
 ##### Luoxu Chen: 
 I was responsible for the core technical components of the project, including data integration, data cleaning, feature engineering, and workflow automation. I merged the rankings and player datasets to construct a unified tennis dataset, standardized date formats, and resolved inconsistencies in country representations by mapping IOC codes to GDP country names. I also handled data quality issues, such as removing obsolete country entries and converting improperly formatted date-of-birth values into usable datetime formats to engineer player age features.
 
-Additionally, Luoxu implemented the integration of the GDP dataset, ensured proper handling of missing values, and prepared the dataset for modeling. He is also responsible for model training and prediction, as well as final workflow automation, documentation, and reproducibility of the project.
+Additionally, I implemented the integration of the GDP dataset, ensured proper handling of missing values, and prepared the dataset for modeling. I was also responsible for model training and prediction, as well as final workflow automation, documentation, and reproducibility of the project.
 
