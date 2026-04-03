@@ -78,3 +78,4 @@ I was responsible for the core technical components of the project, including da
 Additionally, I implemented the integration of the GDP dataset, ensured proper handling of missing values, and prepared the dataset for modeling. I was also responsible for model training and prediction, as well as final workflow automation, documentation, and reproducibility of the project.
 
 ##### Maya Jenny:
+I was responsible for the exploratory data analysis of the integrated ATP tennis and GDP dataset. After the datasets were merged, I analyzed key variables including player ranking points and country-level GDP to better understand their distributions and relationships in relation to our research question.
