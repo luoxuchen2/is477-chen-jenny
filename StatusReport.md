@@ -1,7 +1,7 @@
 # Status Report 
 
 
-### Update on each task: include datasets
+### Update on Each Task
 
 We first read the rankings dataset: tennis_atp/atp_rankings_current.csv at master, the ATP players dataset: tennis_atp/atp_players.csv at master, and the GDP dataset: International Macroeconomic Data Set | Economic Research Service.
 
@@ -33,27 +33,29 @@ Then, we found the correlation between GDP and average player points.
 
 
 ### Update on Timeline:
-Step 1: Data Acquisition and Organization – Target Completion: March 13, 2026 Completed by Maya Jenny and Luoxu Chen
 
-Step 2: Data Integration – Target Completion: March 13, 2026 - Completed by Luoxu Chen
+**Step 1: Data Acquisition and Organization** – *Target Completion: March 13, 2026* Completed by Maya Jenny and Luoxu Chen
 
-Step 3: Data Quality Assessment and Cleaning – Target Completion: March 27, 2026 - Completed by Luoxu Chen 
+**Step 2: Data Integration** – *Target Completion: March 13, 2026* - Completed by Luoxu Chen
 
-Step 4: Exploratory Data Analysis – Target Completion: March 27, 2026 - Completed by Maya Jenny
+**Step 3: Data Quality Assessment and Cleaning** – *Target Completion: March 27, 2026* - Completed by Luoxu Chen 
 
-Step 5: Feature Engineering – Target Completion: April 3, 2026  - Completed by Luoxu Chen
+**Step 4: Exploratory Data Analysis** – *Target Completion: March 27, 2026* - Completed by Maya Jenny
 
-Step 6: Model Preparation – Target Completion: April 17, 2026 - Maya Jenny
+**Step 5: Feature Engineering** – *Target Completion: April 3, 2026*  - Completed by Luoxu Chen
 
-Step 7: Model Training and Prediction – Target Completion: April 24, 2026 - Luoxu Chen
+**Step 6: Model Preparation** – *Target Completion: April 17, 2026* - Maya Jenny
 
-Step 8: Model Evaluation – Target Completion: May 1, 2026 - Maya Jenny
+**Step 7: Model Training and Prediction** – *Target Completion: April 24, 2026* - Luoxu Chen
 
-Step 9: Workflow Automation, Documentation, and Reproducibility – Target Completion: May 1, 2026 - Luoxu Chen 
+**Step 8: Model Evaluation** – *Target Completion: May 1, 2026* - Maya Jenny
+
+**Step 9: Workflow Automation, Documentation, and Reproducibility** – *Target Completion: May 1, 2026* - Luoxu Chen 
 
 
 
 ### Changes to Project Plan
+
 Our Milestone 2 feedback suggested that we enhance the depth of our data integration and analysis. To implement this recommendation, we incorporated a third dataset containing country-level GDP information. This addition allowed us to perform more meaningful operations by linking tennis players to economic indicators based on their country of origin.
 As a result, our research question was refined to examine whether there is a relationship between a player’s country’s wealth and their success in professional tennis, as measured by match outcomes and overall rankings.
 Beyond the inclusion of this dataset, no major changes to the workflow were deemed necessary. The integration process was straightforward, as the datasets shared a common country-level attribute, allowing for efficient merging and data cleaning.
@@ -75,3 +77,4 @@ I was responsible for the core technical components of the project, including da
 
 Additionally, I implemented the integration of the GDP dataset, ensured proper handling of missing values, and prepared the dataset for modeling. I was also responsible for model training and prediction, as well as final workflow automation, documentation, and reproducibility of the project.
 
+#### Maya Jenny:
