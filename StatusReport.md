@@ -79,3 +79,5 @@ Additionally, I implemented the integration of the GDP dataset, ensured proper h
 
 ##### Maya Jenny:
 I was responsible for the exploratory data analysis of the integrated ATP tennis and GDP dataset. After the datasets were merged, I analyzed key variables including player ranking points and country-level GDP to better understand their distributions and relationships in relation to our research question.
+
+I generated multiple data visualizations, including distribution plots for player ranking points and GDP, which helped identify skewness and variability in these two variables. To further investigate the overarching relationship between economic factors and player performance, I constructed scatter plots comparing GDP (x-axis) and player ranking points (y-axis). After observing strong skewness in the data, I applied a logarithmic transformation and produced a log-scale scatter plot to help improve interpretability.
