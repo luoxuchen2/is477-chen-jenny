@@ -70,11 +70,11 @@ After standardizing country representations, we successfully merged the datasets
 We also encountered issues with the dob (date of birth) column, which was stored in a non-standard float format (e.g., 19131122.0). To correct this, we converted the values to integers, then to strings, and finally parsed them into proper datetime objects. This allowed us to engineer a new feature representing player age at the ranking date in 2024. Age was then rounded to the nearest whole number to facilitate clearer aggregation and analysis.
 
 
-### Individual Contribution 
+### Individual Contributions 
 
 ##### Luoxu Chen: 
 I was responsible for the core technical components of the project, including data integration, data cleaning, feature engineering, and workflow automation. I merged the rankings and player datasets to construct a unified tennis dataset, standardized date formats, and resolved inconsistencies in country representations by mapping IOC codes to GDP country names. I also handled data quality issues, such as removing obsolete country entries and converting improperly formatted date-of-birth values into usable datetime formats to engineer player age features.
 
 Additionally, I implemented the integration of the GDP dataset, ensured proper handling of missing values, and prepared the dataset for modeling. I was also responsible for model training and prediction, as well as final workflow automation, documentation, and reproducibility of the project.
 
-#### Maya Jenny:
+##### Maya Jenny:
