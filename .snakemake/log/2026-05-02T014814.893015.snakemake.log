@@ -1,0 +1,146 @@
+Assuming unrestricted shared filesystem usage.
+host: Luoxu_Zenbook
+Building DAG of jobs...
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                     count
+--------------------  -------
+acquire_data                1
+clean_integrate_data        1
+profile_data                1
+analyze_data                1
+make_visualizations         1
+all                         1
+total                       6
+
+Select jobs to execute...
+Execute 1 jobs...
+[Sat May  2 01:48:15 2026]
+localrule acquire_data:
+    output: data/raw/atp_players.csv, data/raw/atp_rankings_current.csv, data/raw/RealGDP.csv
+    jobid: 1
+    reason: Missing output files: data/raw/RealGDP.csv, data/raw/atp_rankings_current.csv, data/raw/atp_players.csv
+    resources: tmpdir=C:\Users\luoxu\AppData\Local\Temp
+[Sat May  2 01:48:19 2026]
+Finished jobid: 1 (Rule: acquire_data)
+1 of 6 steps (17%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Sat May  2 01:48:19 2026]
+localrule profile_data:
+    input: data/raw/atp_players.csv, data/raw/atp_rankings_current.csv, data/raw/RealGDP.csv
+    output: results/tables/raw_dataset_shapes.csv, results/tables/data_quality_summary.csv, results/tables/missing_values_summary.csv
+    jobid: 2
+    reason: Missing output files: results/tables/raw_dataset_shapes.csv, results/tables/data_quality_summary.csv, results/tables/missing_values_summary.csv; Input files updated by another job: data/raw/RealGDP.csv, data/raw/atp_rankings_current.csv, data/raw/atp_players.csv
+    resources: tmpdir=C:\Users\luoxu\AppData\Local\Temp
+Select jobs to execute...
+[Sat May  2 01:48:21 2026]
+Finished jobid: 2 (Rule: profile_data)
+2 of 6 steps (33%) done
+Execute 1 jobs...
+[Sat May  2 01:48:21 2026]
+localrule clean_integrate_data:
+    input: data/raw/atp_players.csv, data/raw/atp_rankings_current.csv, data/raw/RealGDP.csv
+    output: data/processed/tennis_gdp_clean.csv
+    jobid: 3
+    reason: Missing output files: data/processed/tennis_gdp_clean.csv; Input files updated by another job: data/raw/RealGDP.csv, data/raw/atp_rankings_current.csv, data/raw/atp_players.csv
+    resources: tmpdir=C:\Users\luoxu\AppData\Local\Temp
+[Sat May  2 01:48:25 2026]
+Finished jobid: 3 (Rule: clean_integrate_data)
+3 of 6 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Sat May  2 01:48:25 2026]
+localrule analyze_data:
+    input: data/processed/tennis_gdp_clean.csv
+    output: results/tables/country_summary.csv, results/tables/correlation_summary.csv, results/tables/model_classification_report.csv, results/tables/model_predictions.csv
+    jobid: 4
+    reason: Missing output files: results/tables/model_predictions.csv, results/tables/correlation_summary.csv, results/tables/model_classification_report.csv, results/tables/country_summary.csv; Input files updated by another job: data/processed/tennis_gdp_clean.csv
+    resources: tmpdir=C:\Users\luoxu\AppData\Local\Temp
+Select jobs to execute...
+[Sat May  2 01:49:16 2026]
+Finished jobid: 4 (Rule: analyze_data)
+4 of 6 steps (67%) done
+Execute 1 jobs...
+[Sat May  2 01:49:16 2026]
+localrule make_visualizations:
+    input: data/processed/tennis_gdp_clean.csv
+    output: results/figures/points_distribution.png, results/figures/gdp_distribution.png, results/figures/gdp_vs_points.png, results/figures/log_gdp_vs_points.png, results/figures/player_points_by_gdp_group.png, results/figures/country_gdp_vs_average_points.png
+    jobid: 5
+    reason: Missing output files: results/figures/log_gdp_vs_points.png, results/figures/gdp_distribution.png, results/figures/gdp_vs_points.png, results/figures/player_points_by_gdp_group.png, results/figures/country_gdp_vs_average_points.png, results/figures/points_distribution.png; Input files updated by another job: data/processed/tennis_gdp_clean.csv
+    resources: tmpdir=C:\Users\luoxu\AppData\Local\Temp
+RuleException:
+CalledProcessError in file "C:\Users\luoxu\OneDrive - University of Illinois - Urbana\stat207\is477-chen-jenny\Snakefile", line 73:
+Command 'python scripts/05_make_visualizations.py' returned non-zero exit status 2.
+[Sat May  2 01:49:17 2026]
+Error in rule make_visualizations:
+    message: None
+    jobid: 5
+    input: data/processed/tennis_gdp_clean.csv
+    output: results/figures/points_distribution.png, results/figures/gdp_distribution.png, results/figures/gdp_vs_points.png, results/figures/log_gdp_vs_points.png, results/figures/player_points_by_gdp_group.png, results/figures/country_gdp_vs_average_points.png
+    shell:
+        python scripts/05_make_visualizations.py
+        (command exited with non-zero exit code)
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Sat May  2 01:49:17 2026]
+Error in rule make_visualizations:
+    message: None
+    jobid: 5
+    input: data/processed/tennis_gdp_clean.csv
+    output: results/figures/points_distribution.png, results/figures/gdp_distribution.png, results/figures/gdp_vs_points.png, results/figures/log_gdp_vs_points.png, results/figures/player_points_by_gdp_group.png, results/figures/country_gdp_vs_average_points.png
+    shell:
+        python scripts/05_make_visualizations.py
+        (command exited with non-zero exit code)
+Complete log(s): C:\Users\luoxu\OneDrive - University of Illinois - Urbana\stat207\is477-chen-jenny\.snakemake\log\2026-05-02T014814.893015.snakemake.log
+Traceback (most recent call last):
+
+  File "C:\Users\luoxu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\snakemake\persistence\__init__.py", line 566, in lock
+    yield
+
+  File "C:\Users\luoxu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\snakemake\workflow.py", line 1507, in execute
+    raise WorkflowError("At least one job did not complete successfully.")
+
+snakemake_interface_common.exceptions.WorkflowError: At least one job did not complete successfully.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\luoxu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\snakemake\cli.py", line 2308, in args_to_api
+    dag_api.execute_workflow(
+
+  File "C:\Users\luoxu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\snakemake\api.py", line 646, in execute_workflow
+    workflow.execute(
+
+  File "C:\Users\luoxu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\snakemake\workflow.py", line 1298, in execute
+    with self.persistence.lock():
+         ^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+
+  File "C:\Users\luoxu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\snakemake\persistence\__init__.py", line 568, in lock
+    self.unlock()
+
+  File "C:\Users\luoxu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\snakemake\persistence\__init__.py", line 572, in unlock
+    self._delete_locks()
+
+  File "C:\Users\luoxu\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\snakemake\persistence\file.py", line 260, in _delete_locks
+    shutil.rmtree(self._lockdir)
+
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\shutil.py", line 639, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\shutil.py", line 637, in _rmtree_unsafe
+    os.rmdir(path)
+
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\luoxu\\OneDrive - University of Illinois - Urbana\\stat207\\is477-chen-jenny\\.snakemake\\locks'
+

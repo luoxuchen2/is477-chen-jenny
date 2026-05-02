@@ -1,0 +1,17 @@
+dataset,column,dtype,num_rows,missing_count,missing_percent,unique_count,duplicate_rows_total
+ATP players,player_id,int64,65989,0,0.0,65989,0
+ATP players,name_first,object,65989,921,1.4,14488,0
+ATP players,name_last,object,65989,48,0.07,40250,0
+ATP players,hand,object,65989,16,0.02,4,0
+ATP players,dob,float64,65989,18402,27.89,17312,0
+ATP players,ioc,object,65989,670,1.02,228,0
+ATP players,height,float64,65989,61830,93.7,43,0
+ATP players,wikidata_id,object,65989,61095,92.58,4825,0
+ATP rankings current,ranking_date,int64,92341,0,0.0,44,0
+ATP rankings current,rank,int64,92341,0,0.0,2003,0
+ATP rankings current,player,int64,92341,0,0.0,2612,0
+ATP rankings current,points,int64,92341,0,0.0,1668,0
+USDA Real GDP,Observation,object,30624,0,0.0,232,0
+USDA Real GDP,Year,int64,30624,0,0.0,66,0
+USDA Real GDP,Unit,object,30624,0,0.0,2,0
+USDA Real GDP,Value,float64,30624,2220,7.25,27834,0
