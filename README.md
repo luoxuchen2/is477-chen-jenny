@@ -4,8 +4,8 @@
 # Influence of National Wealth and Physical Attributes on ATP Professional Tennis Rankings
 ## Contributors:
 
-- Maya Jenny (mnjenny2)
 - Luoxu Chen (luoxuc2)
+- Maya Jenny (mnjenny2)
 
 ## Summary
 This course project explores the relationship between a country’s economic wealth and the success of its professional men's tennis players, as measured through the Association of Tennis Professionals (ATP) rankings and common player performance metrics. The motivation for this analysis stems from the observation and mutual understanding that professional tennis is a resource-intensive sport, requiring large financial investments in training, coaching, travel, and competition over the course of a few years to several decades. As a result, players from wealthier countries may have certain structural advantages that contribute to higher performance outcomes in matchplay. This project seeks to determine whether such advantages are observable and significant in real-world data and whether macroeconomic indicators such as GDP can help explain some of the variation in ATP rankings.
