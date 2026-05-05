@@ -126,13 +126,13 @@ To reproduce the results, a user should first clone the project repository from 
 
 `pip install -r requirements.txt`
 
-Once dependencies are installed, the full data processing and analysis pipeline can be executed using the Snakemake workflow included in the repository. Snakemake was used to automate the sequence of steps from data cleaning and integration to analysis and visualization, ensuring that each step is executed in the correct order and that intermediate outputs are properly generated.
+Once dependencies are installed, the full data processing and analysis pipeline can be executed using the Snakemake workflow included in the repository. Snakemake was used to automate the sequence of steps from data cleaning and integration to analysis and visualization, ensuring that each step is executed in the correct order and that outputs are properly generated.
 
 To run the full workflow, the following command can be used:
 
-python -m snakemake --cores 1
+`python -m snakemake --cores 1`
 
-This command will automatically execute all steps in the pipeline, including data preprocessing, dataset integration, feature engineering, and generation of visualizations and analysis outputs. The workflow is defined such that each step depends on the outputs of previous steps, ensuring consistency and preventing redundant computation.
+This command should automatically execute all steps in the pipeline, including data preprocessing, dataset integration, feature engineering, and generation of visualizations and analysis outputs. The workflow is defined such that each step depends on the outputs of previous steps.
 
 The pipeline includes scripts for:
 
@@ -145,13 +145,11 @@ Running regression analysis and saving model outputs
 
 All intermediate and final outputs are saved in designated folders within the repository (e.g., /data/processed/, /outputs/, /figures/), making it easy to verify results at each stage of the workflow.
 
-Because all transformations are scripted and no manual steps are required after setup, running the workflow should produce identical results to those presented in the report. This ensures full reproducibility and transparency of the data curation and analysis process.
+Running the workflow should produce identical results to those presented in the report. This ensures full reproducibility and transparency of the data curation and analysis process.
 
 ## References
-Sackmann, J. (2024). ATP Tennis Rankings, Results, and Stats. GitHub Repository.
+Sackmann, Jeff. ATP Tennis Rankings, Results, and Stats Dataset. GitHub Repository.
+https://github.com/JeffSackmann/tennis_atp
 
-USDA Economic Research Service. (2024). International Macroeconomic Data Set. Official Website.
-
-Pedregosa, F., et al. (2011). Scikit-learn: Machine Learning in Python. Journal of Machine Learning Research.
-
-Hunter, J. D. (2007). Matplotlib: A 2D Graphics Environment. Computing in Science & Engineering.
+United States Department of Agriculture, Economic Research Service. International Macroeconomic Data Set.
+https://www.ers.usda.gov/data-products/international-macroeconomic-data-set/
