@@ -1,0 +1,97 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Tennis Player Success and Country GDP",
+  "description": "This project integrates ATP tennis ranking and player data with USDA ERS country-level real GDP data to examine whether country wealth is associated with tennis player success. The workflow downloads, profiles, cleans, integrates, analyzes, and visualizes the data using Python and Snakemake.",
+  "creator": [
+    {
+      "@type": "Person",
+      "name": "Luoxu Chen"
+    },
+    {
+      "@type": "Person",
+      "name": "Jenny"
+    }
+  ],
+  "keywords": [
+    "ATP tennis",
+    "tennis rankings",
+    "GDP",
+    "country wealth",
+    "data integration",
+    "data curation",
+    "sports analytics",
+    "Snakemake",
+    "reproducibility"
+  ],
+  "license": "Project code license should be specified by the authors. Source datasets remain subject to their original providers' terms and licenses.",
+  "isBasedOn": [
+    {
+      "@type": "Dataset",
+      "name": "Jeff Sackmann tennis_atp",
+      "url": "https://github.com/JeffSackmann/tennis_atp",
+      "description": "ATP tennis player and ranking data used for player characteristics and ranking outcomes."
+    },
+    {
+      "@type": "Dataset",
+      "name": "USDA ERS International Macroeconomic Data Set",
+      "url": "https://www.ers.usda.gov/data-products/international-macroeconomic-data-set",
+      "description": "Country-level real GDP data used to measure national economic context."
+    }
+  ],
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "ATP players raw data",
+      "contentUrl": "data/raw/atp_players.csv",
+      "encodingFormat": "text/csv"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "ATP rankings raw data",
+      "contentUrl": "data/raw/atp_rankings_current.csv",
+      "encodingFormat": "text/csv"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "USDA real GDP raw data",
+      "contentUrl": "data/raw/RealGDP.csv",
+      "encodingFormat": "text/csv"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Cleaned integrated tennis-GDP dataset",
+      "contentUrl": "data/processed/tennis_gdp_clean.csv",
+      "encodingFormat": "text/csv"
+    }
+  ],
+  "variableMeasured": [
+    "ATP ranking",
+    "ATP ranking points",
+    "player age",
+    "player height",
+    "player handedness",
+    "country real GDP",
+    "log GDP",
+    "GDP group",
+    "rank category"
+  ],
+  "temporalCoverage": "1970/2035",
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "Countries represented in ATP player data and USDA GDP data"
+  },
+  "programmingLanguage": "Python",
+  "softwareRequirements": [
+    "pandas",
+    "numpy",
+    "matplotlib",
+    "scikit-learn",
+    "snakemake",
+    "requests"
+  ],
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "IS 477 Final Project Repository"
+  }
+}
