@@ -120,17 +120,32 @@ Finally, interpreting the results posed its own set of challenges. The presence 
 These challenges highlight the complexity of working with real-world data and underscore the importance of careful data curation, validation, and documentation in producing reliable and reproducible results.
 
 ## Reproducing
-To reproduce the results of this analysis, follow these steps:
+This project was designed with reproducibility as a core objective, and the entire workflow from raw data to final results can be re-executed using the provided scripts and workflow automation. All data files, scripts, and outputs are organized within the repository to ensure that another user can replicate the analysis with minimal setup and little to no troubleshooting maneuvers.
 
-Clone the Repository: Download the project folder from GitHub.
+To reproduce the results, a user should first clone the project repository from GitHub and navigate to the project directory. All required Python dependencies are listed in the requirements.txt file. These can be installed using:
 
-Environment Setup: Ensure you have Python 3.12+ installed. Install dependencies using pip install pandas matplotlib scikit-learn.
+`pip install -r requirements.txt`
 
-Data Acquisition: Place atp_players.csv, atp_rankings_current.csv, and RealGDP.csv in the root directory.
+Once dependencies are installed, the full data processing and analysis pipeline can be executed using the Snakemake workflow included in the repository. Snakemake was used to automate the sequence of steps from data cleaning and integration to analysis and visualization, ensuring that each step is executed in the correct order and that intermediate outputs are properly generated.
 
-Execute Analysis: Open the notebook.ipynb and run all cells sequentially. The script will handle the conversion of dob to datetime, calculate age, perform country mapping, and generate the final visualizations.
+To run the full workflow, the following command can be used:
 
-Verify Results: Compare the generated scatter plots and box plots with the findings reported in this README to ensure the workflow executed successfully.
+python -m snakemake --cores 1
+
+This command will automatically execute all steps in the pipeline, including data preprocessing, dataset integration, feature engineering, and generation of visualizations and analysis outputs. The workflow is defined such that each step depends on the outputs of previous steps, ensuring consistency and preventing redundant computation.
+
+The pipeline includes scripts for:
+
+Cleaning and preprocessing the ATP players dataset and GDP dataset
+Standardizing formats such as dates and country identifiers
+Merging datasets using player IDs and country mappings
+Generating derived variables such as player age
+Producing visualizations such as scatter plots, box plots, and distributions
+Running regression analysis and saving model outputs
+
+All intermediate and final outputs are saved in designated folders within the repository (e.g., /data/processed/, /outputs/, /figures/), making it easy to verify results at each stage of the workflow.
+
+Because all transformations are scripted and no manual steps are required after setup, running the workflow should produce identical results to those presented in the report. This ensures full reproducibility and transparency of the data curation and analysis process.
 
 ## References
 Sackmann, J. (2024). ATP Tennis Rankings, Results, and Stats. GitHub Repository.
