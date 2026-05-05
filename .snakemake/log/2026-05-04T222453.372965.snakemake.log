@@ -1,0 +1,7 @@
+Assuming unrestricted shared filesystem usage.
+host: Luoxu_Zenbook
+Building DAG of jobs...
+MissingInputException in rule all in file "C:\Users\luoxu\OneDrive - University of Illinois - Urbana\stat207\is477-chen-jenny\Snakefile", line 1:
+Missing input files for rule all:
+    affected files:
+        results/figures/country_gdp_vs_average_points.pngdata/raw/actual_checksums_sha256.csv

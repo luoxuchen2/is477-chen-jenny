@@ -16,13 +16,17 @@ rule all:
         "results/figures/gdp_vs_points.png",
         "results/figures/log_gdp_vs_points.png",
         "results/figures/player_points_by_gdp_group.png",
-        "results/figures/country_gdp_vs_average_points.png"
+        "results/figures/country_gdp_vs_average_points.png",
+        "data/raw/actual_checksums_sha256.csv",
+        "data/raw/checksum_verification.csv",
 
 rule acquire_data:
     output:
         players="data/raw/atp_players.csv",
         rankings="data/raw/atp_rankings_current.csv",
-        gdp="data/raw/RealGDP.csv"
+        gdp="data/raw/RealGDP.csv",
+        actual_checksums="data/raw/actual_checksums_sha256.csv",
+        verification="data/raw/checksum_verification.csv"
     shell:
         "python scripts/01_acquire_data.py"
 
