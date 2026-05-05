@@ -10,7 +10,7 @@
     },
     {
       "@type": "Person",
-      "name": "Jenny"
+      "name": "Maya Jenny"
     }
   ],
   "keywords": [
@@ -92,6 +92,6 @@
   ],
   "includedInDataCatalog": {
     "@type": "DataCatalog",
-    "name": "IS 477 Final Project Repository"
+    "name": "is-477-chen-jenny"
   }
 }
